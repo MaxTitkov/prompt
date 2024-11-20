@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F32</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">DS Prompts</a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="index.html">F41</a>
+                <a class="navbar-item is-active" href="f32.html">F32</a>
+            </div>
+        </div>
+    </nav>
+<div class="container is-fluid has-text-centered custom-container">
+    <h1 class="is-size-2 is-size-4-mobile mb-3">Health Information Form</h1>
+    <form action="/submit" method="post">
+        <div class="form-group">
+            <label for="treatment">Diagnosis:</label>
+            <input type="text" id="diagnosis" name="diagnosis" value="F32.0 Депрессивный эпизод легкой степени" placeholder="Provide ds..." required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="symptoms">Symptoms:</label>
+            <input type="text" id="symptoms" name="symptoms" value="эпизоды снижения настроения, периоидческая тревога, бессонница, снижение аппетита, периодические антивитальные переживания" placeholder="Enter your symptoms here..." required>
+        </div>
+        <div class="form-group">
+            <label for="treatment">Treatment:</label>
+            <textarea id="treatment" name="treatment" placeholder="Describe the treatment..." required>Феварин 50 мг на ночь. При тревоге дополнительно Атаракс 25 мг. Консультация психотерапевта: Конгитивно-поведенческая психотерапия.</textarea>
+        </div>
+        <div class="form-group">
+            <label for="additional-info">Additional Information:</label>
+            <textarea id="additional-info" name="additional-info" placeholder="Any other information..." required>Также, напиши коротко оценку суицидального риска по шкале SAD PERSONS низкий (2 балла). Опиши, что у пациента нет суицидального плана и на момент осмотра суицидальный риск по шкале низкий</textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <div class="prompt" id="promptElem">
+        <div class="buttons">
+            <a class="button is-dark is-rounded mr-4" href='https://www.perplexity.ai/'>perplexity</a>
+            <button class="button is-info ml-4" onclick="copyPromptText()">Copy Prompt</button>
+        </div>
+        <!-- <button onclick="copyPromptText()">Copy Prompt</button> -->
+        <p id="promptText">Ты врач-психиатр. У тебя на приеме был пациент с жалобами на эпизоды снижения настроения, периоидческая тревога, бессонница, снижение аппетита, периодические антивитальные переживания ты выставил ему диагноз F32.0 Депрессивный эпизод легкой степени и назначил Феварин 50 мг на ночь. При тревоге дополнительно Атаракс 25 мг. Консультация психотерапевта: Конгитивно-поведенческая психотерапия.
+        Напиши: 1. обоснование диагноза F32.0 Депрессивный эпизод легкой степени а основании жалоб эпизоды снижения настроения, периоидческая тревога, бессонница, снижение аппетита, периодические антивитальные переживания согласно МКБ-10
+        2. Обоснование назначенной терапии: Феварин 50 мг на ночь. При тревоге дополнительно Атаракс 25 мг. Консультация психотерапевта: Конгитивно-поведенческая психотерапия. согласно федеральным клиническим рекомендациям.
+        Также, напиши коротко оценку суицидального риска по шкале SAD PERSONS низкий (2 балла). Опиши, что у пациента нет суицидального плана и на момент осмотра суицидальный риск по шкале низкий
+        Обоснования должны быть написаны сухим медицинским языком для медицинской карты, характерным для врача-психиатра
+        Каждое обоснование с новой строки</p>
+    </div>
+</div>
+
+<script src="form.js"></script>
+<script src="copy.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
