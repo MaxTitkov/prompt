@@ -29,19 +29,19 @@
     <h1 class="is-size-2 is-size-4-mobile mb-3">Health Information Form</h1>
     <form action="/submit" method="post">
         <div class="form-group">
-            <label for="treatment">Diagnosis:</label>
+            <label for="treatment">Диагноз:</label>
             <input type="text" id="diagnosis" name="diagnosis" value="F32.0 Депрессивный эпизод легкой степени" placeholder="Provide ds..." required></textarea>
         </div>
         <div class="form-group">
-            <label for="symptoms">Symptoms:</label>
+            <label for="symptoms">Симптомы:</label>
             <input type="text" id="symptoms" name="symptoms" value="эпизоды снижения настроения, периоидческая тревога, бессонница, снижение аппетита, периодические антивитальные переживания" placeholder="Enter your symptoms here..." required>
         </div>
         <div class="form-group">
-            <label for="treatment">Treatment:</label>
+            <label for="treatment">Лечение:</label>
             <textarea id="treatment" name="treatment" placeholder="Describe the treatment..." required>Феварин 50 мг на ночь. При тревоге дополнительно Атаракс 25 мг. Консультация психотерапевта: Конгитивно-поведенческая психотерапия.</textarea>
         </div>
         <div class="form-group">
-            <label for="additional-info">Additional Information:</label>
+            <label for="additional-info">Дополнительная информация:</label>
             <textarea id="additional-info" name="additional-info" placeholder="Any other information..." required>Также, напиши коротко оценку суицидального риска по шкале SAD PERSONS низкий (2 балла). Опиши, что у пациента нет суицидального плана и на момент осмотра суицидальный риск по шкале низкий</textarea>
         </div>
         <button type="submit">Submit</button>
@@ -50,9 +50,9 @@
     <div class="prompt" id="promptElem">
         <div class="buttons">
             <a class="button is-dark is-rounded mr-4" href='https://www.perplexity.ai/'>perplexity</a>
-            <button class="button is-info ml-4" onclick="copyPromptText()">Copy Prompt</button>
+            <button class="button is-info ml-4" onclick="copyPromptText()">Copy</button>
         </div>
-        <!-- <button onclick="copyPromptText()">Copy Prompt</button> -->
+        <!-- <button onclick="copyPromptText()">Скопировать</button> -->
         <p id="promptText">Ты врач-психиатр. У тебя на приеме был пациент с жалобами на эпизоды снижения настроения, периоидческая тревога, бессонница, снижение аппетита, периодические антивитальные переживания ты выставил ему диагноз F32.0 Депрессивный эпизод легкой степени и назначил Феварин 50 мг на ночь. При тревоге дополнительно Атаракс 25 мг. Консультация психотерапевта: Конгитивно-поведенческая психотерапия.
         Напиши: 1. обоснование диагноза F32.0 Депрессивный эпизод легкой степени а основании жалоб эпизоды снижения настроения, периоидческая тревога, бессонница, снижение аппетита, периодические антивитальные переживания согласно МКБ-10
         2. Обоснование назначенной терапии: Феварин 50 мг на ночь. При тревоге дополнительно Атаракс 25 мг. Консультация психотерапевта: Конгитивно-поведенческая психотерапия. согласно федеральным клиническим рекомендациям.
