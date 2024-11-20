@@ -8,7 +8,7 @@ function handleSubmit(event) {
     const additionalInfo = document.getElementById('additional-info').value;
 
     const promptElem = document.getElementById('promptElem');
-    const promptContent = `Ты врач-психиатр. У тебя на приеме был пациент с жалобами на ${symptoms} ты выставил ему диагноз ${diagnosis} и назначил ${treatment}\nНапиши: 1. обоснование диагноза ${diagnosis} а основании жалоб ${symptoms} согласно МКБ-10\n2. Обоснование назначенной терапии: ${treatment} согласно федеральным клиническим рекомендациям.\n${additionalInfo}\nОбоснования должны быть написаны сухим медицинским языком для медицинской карты, характерным для врача-психиатра\nКаждое обоснование с новой строки`
+    const promptContent = `Ты врач-психиатр. У тебя на приеме был пациент с жалобами на ${symptoms} ты выставил ему диагноз ${diagnosis} и назначил ${treatment}\nНапиши: 1. обоснование диагноза ${diagnosis} а основании жалоб ${symptoms} согласно МКБ-10\n2. Обоснование назначенной терапии: ${treatment} согласно федеральным клиническим рекомендациям по лечению ${diagnosis}.\n${additionalInfo}\nОбоснования должны быть написаны сухим медицинским языком для медицинской карты, характерным для врача-психиатра\nКаждое обоснование с новой строки`
     const promptP = document.getElementById("promptText");
     promptP.innerText = promptContent
     // promptElem.appendChild(promptDiv)
